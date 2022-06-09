@@ -4,12 +4,12 @@
 
 <div>
   <%	 @portfolio_items.each do |portfolio_item| %>
-    <h3><%=	 portfolio_item.title %></h3>
+    <h3><%= link_to	 portfolio_item.title, portfolio_path(portfolio_item) %></h3>
     <span><%=	 portfolio_item.subtitle %></span>
     <p>
       <%=	 portfolio_item.body %>
     </p>
     <%=	 image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
-    <%=	 link_to "Edit", edit_portfolio_path(portfolio_item.id) %>
+    <%=	 link_to "Edit", edit_portfolio_path(portfolio_item) %>
   <% end %>
 </div>

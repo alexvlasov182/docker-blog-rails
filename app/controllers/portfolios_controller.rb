@@ -5,15 +5,18 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+  def show; end
+
   def new
     @portfolio_item = Portfolio.new
   end
 
+  def edit; end
+
   def create
-    @portfolio_item = Portfolio.new(portfolio_params)
+    @portfolio_item = Portfolio.new(portfolios_params)
 
     respond_to do |format|
-
       if @portfolio_item.save
         format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live' }
       else
@@ -23,9 +26,8 @@ class PortfoliosController < ApplicationController
   end
 
   def update
-
     respond_to do |format|
-      if @portfolio_item.update(portfolio_params)
+      if @portfolio_item.update(portfolios_params)
         format.html { redirect_to portfolios_path, notice: 'Portfolio item is updated' }
       else
         format.html { render :edit }
@@ -39,7 +41,7 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.find(params[:id])
   end
 
-  def portfolio_params
+  def portfolios_params
     params.require(:portfolio).permit(:title, :subtitle, :body)
   end
 
