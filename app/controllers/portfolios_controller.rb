@@ -1,4 +1,6 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolios, only: %i[edit show update]
+
   def index
     @portfolio_items = Portfolio.all
   end
@@ -13,15 +15,29 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
 
       if @portfolio_item.save
-        format.html {redirect_to portfolios_path, notice: "Your portfolio item is now live"}
+        format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live' }
       else
-        format.html {render :new}
+        format.html { render :new }
       end
     end
+  end
 
+  def update
+
+    respond_to do |format|
+      if @portfolio_item.update(portfolio_params)
+        format.html { redirect_to portfolios_path, notice: 'Portfolio item is updated' }
+      else
+        format.html { render :edit }
+      end
+    end
   end
 
   private
+
+  def set_portfolios
+    @portfolio_item = Portfolio.find(params[:id])
+  end
 
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle, :body)
