@@ -4,7 +4,7 @@
 
 <div>
   <%	 @portfolio_items.each do |portfolio_item| %>
-    <h3><%= link_to	 portfolio_item.title, portfolio_path(portfolio_item) %></h3>
+    <h3><%= link_to	 portfolio_item.title, portfolio_show_path(portfolio_item) %></h3>
     <span><%=	 portfolio_item.subtitle %></span>
     <p>
       <%=	 portfolio_item.body %>
