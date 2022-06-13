@@ -5,20 +5,26 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+  def angular
+    @angular_portfolio_items = Portfolio.angular
+
+  end
+
   def show; end
 
   def new
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def edit; end
 
   def create
-    @portfolio_item = Portfolio.new(portfolios_params)
+    @portfolio_item = Portfolio.new(portfolio_params)
 
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live' }
+        format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
       else
         format.html { render :new }
       end
@@ -27,7 +33,7 @@ class PortfoliosController < ApplicationController
 
   def update
     respond_to do |format|
-      if @portfolio_item.update(portfolios_params)
+      if @portfolio_item.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: 'Portfolio item is updated' }
       else
         format.html { render :edit }
@@ -50,8 +56,8 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.find(params[:id])
   end
 
-  def portfolios_params
-    params.require(:portfolio).permit(:title, :subtitle, :body)
+  def portfolio_params
+    params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
   end
 
 end
