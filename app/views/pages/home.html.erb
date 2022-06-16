@@ -1,17 +1,3 @@
 <h1>Hi <%= current_user.last_name %></h1>
 
-<h2>Posts</h2>
-<div>
-  <%	@posts.each do |post|  %>
-    <h3><%= post.title %></h3>
-    <p><%= post.body  %></p>
-  <% end %>
-</div>
 
-<h2>Skills</h2>
-<div>
-  <%	@skills.each do |skill|  %>
-    <h3><%=	skill.title  %></h3>
-    <p>percent: <%=	skill.percent_utilized  %></p>
-  <%	end %>
-</div>
