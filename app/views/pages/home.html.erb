@@ -1,3 +1,35 @@
-<h1>Hi <%= current_user.last_name %></h1>
+<main role="main" class="inner cover">
+  <div class="container">
+    <div class="front-block">
+      <%= image_tag 'front-img.avif' %>
+      <h1 class="cover-heading text-center">Hi, my name is Anastasiia and I’m a UX/UI designer with more than 4 years of experience.</h1>
+    </div>
+    <div class="information-block">
+      <p class="info-text">
+        Passionate about designing technologies to enrich people’s quality of life.
+        I grew up as a multi-disciplinary designer with a broad approach. But for the last 4 years with LeanSquad, I have focused on being a T-shaped UX/UI and Product designer.
+      </p>
 
+      <p class="info-text">
+        I mainly developed large CRM systems and company products. In addition to creating complex systems with a simple user experience, I have experience working
+        with:
+      </p>
+      <ul class="list-item">
+        <li class="left">Creating journey maps, personas and wireframes,</li>
+        <li class="left">UX research and testing,</li>
+        <li class="left">Information architecture,</li>
+        <li class="left">Style guides and atomic design systems,</li>
+        <li class="left">Design concepts, prototypes.</li>
+      </ul>
 
+      <p class="info-text">
+        When it comes to work, my motto is `Simple is better`. Therefore, I prefer clean and minimalist design. I try to create simple and fun experiences for people who appreciate elegant and dynamic efficiency.
+      </p>
+
+      <p class="lead text-center">
+        <%= link_to "About Me", about_path, class: "btn btn-success" %>
+      </p>
+    </div>
+  </div>
+
+</main>

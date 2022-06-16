@@ -1,7 +1,14 @@
-<h1>About</h1>
-<div>
-  <%	@skills.each do |skill|  %>
-    <h2><%=	 skill.title %></h2>
-    <p>Percent: <%= skill.percent_utilized %></p>
-  <%	end  %>
-</div>
+<main>
+  <div class="container">
+    <div>
+      <h1>About</h1>
+      <%	@skills.each do |skill|  %>
+        <h2><%=	 skill.title %></h2>
+        <p>Percent: <%= skill.percent_utilized %></p>
+      <%	end  %>
+    </div>
+  </div>
+</main>
+
+
+
