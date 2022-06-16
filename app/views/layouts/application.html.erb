@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title><%= @page_title%></title>
     <%= csrf_meta_tags %>
 
+    <meta name="keywords" content="<%=	 @seo_keywords %>">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <% if current_user %>
+
+    <%= nav_helper 'nav-link', 'span' %>
+    <% if current_user.is_a?(User) %>
       <%=	 link_to "Logout", destroy_user_session_path, method: :delete %>
     <% else %>
       <%=	 link_to "Register", new_user_registration_path  %>
