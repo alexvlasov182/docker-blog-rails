@@ -6,7 +6,7 @@ module DefaultPageContent
   end
 
   def set_page_defaults
-    @page_title = 'Alex Vlasov | My Portfolio'
-    @seo_keywords = 'Alex Vlasov portfolio'
+    @page_title = 'Anastasiia Vlasova | My Portfolio'
+    @seo_keywords = 'Anastasiia Vlasova portfolio'
   end
 end

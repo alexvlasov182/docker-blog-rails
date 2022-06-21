@@ -3,6 +3,7 @@
 <%=	 link_to 'Create New Item', new_portfolio_path %>
 
 <div>
+  <%=	 source_helper("alert alert-warning") %>
   <%	 @portfolio_items.each do |portfolio_item| %>
     <h3><%= link_to	 portfolio_item.title, portfolio_show_path(portfolio_item) %></h3>
     <span><%=	 portfolio_item.subtitle %></span>
