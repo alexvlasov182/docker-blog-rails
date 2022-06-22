@@ -8,7 +8,6 @@ class PortfoliosController < ApplicationController
 
   def angular
     @angular_portfolio_items = Portfolio.angular
-
   end
 
   def show; end
