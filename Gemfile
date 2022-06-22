@@ -35,4 +35,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.2'
 gem 'bootstrap', '~> 4.6.1'
+gem 'blog_portfolio_view_tool', git: 'https://github.com/alexvlasov182/blog_portfolio_view_tool'
 
