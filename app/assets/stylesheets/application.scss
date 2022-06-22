@@ -132,12 +132,6 @@ h5, .h5 {
   color: rgba(255, 255, 255, .5);
 }
 
-.container-fluid {
-}
-.collapse {
-  margin-left: 400px;
-}
-
 .blog-footer {
   padding: 1.5rem 0;
   color: #999;
@@ -165,4 +159,8 @@ h5, .h5 {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+}
+
+.navbar-expand-md .navbar-collapse {
+  flex-grow: initial;
 }
