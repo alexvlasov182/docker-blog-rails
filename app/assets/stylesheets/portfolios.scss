@@ -1,4 +1,6 @@
 @import 'bootstrap';
+@import 'font-awesome';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap');
 
 body {
 
@@ -31,4 +33,29 @@ h1 {
 
 .navbar-expand-md .navbar-collapse {
   flex-grow: initial;
+}
+
+.navbar-nav {
+  li {
+    font-size: 18px;
+    a {
+      color: grey;
+      &:hover {
+        color: deepskyblue;
+      }
+    }
+  }
+}
+
+.nav-link {
+  font-size: 18px;
+  color: grey;
+}
+
+.navbar-brand {
+  font-family: 'Roboto Slab', serif;
+  color: rgba(0,0,0,0.9);
+  font-size: 23px;
+  font-weight: 500;
+
 }

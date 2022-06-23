@@ -227,6 +227,9 @@ div #error_explanation {
 
     a {
       color: grey;
+      &:hover {
+        color: deepskyblue;
+      }
     }
   }
 }
