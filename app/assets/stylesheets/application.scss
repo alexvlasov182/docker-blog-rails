@@ -171,5 +171,13 @@ h5, .h5 {
 
 .shadow-custom {
   border: none;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.app-card-container {
+  max-width: 880px;
+  margin: 0 auto;
+  color: black;
+  a {
+    color: deepskyblue;
+  }
 }
