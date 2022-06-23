@@ -28,3 +28,7 @@ h1 {
   justify-content: space-between;
   min-height: 100vh;
 }
+
+.navbar-expand-md .navbar-collapse {
+  flex-grow: initial;
+}

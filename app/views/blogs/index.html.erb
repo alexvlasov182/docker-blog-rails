@@ -1,24 +1,24 @@
-<p id="notice"><%= notice %></p>
+<main role="main" class="container blog-margin">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <div class="border-bottom mb-4">
+        <h1 class="blog-title">Design Thoughts</h1>
+        <p class="lead blog-description">First blog Anastasiia Vlasova UX Designer</p>
+        <div>
+          <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
+        </div>
 
-<h1>Blogs</h1>
-<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
-<%=	 source_helper("alert alert-warning") %>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Date</th>
-      <th>Topic Id</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead>
+        <div class="mb-3">
+          <%#= link_to "Topics", topics_path %>
+        </div>
+      </div>
+      <%= render @blogs %>
 
-  <tbody>
-    <%= render @blogs %>
-  </tbody>
-</table>
+      <%#= paginate @blogs %>
 
-<br>
+    </div>
+    <%#= render 'shared/blog_sidebar' %>
+  </div>
+</main>
 
 
