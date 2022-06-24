@@ -1,0 +1,7 @@
+<%	if loggedi_in?(:site_admin)  %>
+  <nav class="breadcrumb blogcrumb">
+    <%	link_to fa_icon('file-text'), toggle_status_blog_path(blog), style: blogs_status_color(blog)  %>
+    <%	link_to fa_icon('pencil'), edit_blog_path(blog) %>
+    <%	link_to fa_icon('trash'), blog, method: :delete, data: {confirm: 'Are you sure?'}  %>
+  </nav>
+<%	end %>

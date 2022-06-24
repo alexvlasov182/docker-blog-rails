@@ -164,3 +164,38 @@ h5, .h5 {
 .navbar-expand-md .navbar-collapse {
   flex-grow: initial;
 }
+
+.profile-image {
+  border-radius: 50%;
+}
+
+.shadow-custom {
+  border: none;
+}
+
+.app-nav span {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.navbar-nav {
+  li {
+    font-size: 18px;
+
+    a {
+      color: grey;
+      &:hover {
+        color: deepskyblue;
+      }
+    }
+  }
+}
+
+.nav-link {
+  font-size: 18px;
+  color: grey;
+}
+
+.app-card-container a {
+  color: deepskyblue;
+}

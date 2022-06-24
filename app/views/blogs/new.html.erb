@@ -1,5 +1,22 @@
-<h1>New Blog</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main blog-margin">
+      <div class="border-bottom mb-4">
+        <h1 class="blog-title">Design Thoughts</h1>
+        <p class="lead blog-description">First blog Anastasiia Vlasova UX Designer</p>
+        <div class="mb-3">
+          <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
+        </div>
+        <span>
+          <%#= link_to "Topics", topics_path %>
+        </span>
+      </div>
+      <h2>New Blog</h2>
 
-<%= render 'form', blog: @blog %>
+      <%= render 'form', blog: @blog %>
 
-<%= link_to 'Back', blogs_path %>
+      <%= link_to 'Back', blogs_path, class: "mb-4" %>
+    </div>
+    <%= render 'shared/blog_sidebar' %>
+  </div>
+</div>

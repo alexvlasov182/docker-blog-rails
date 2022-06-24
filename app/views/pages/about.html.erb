@@ -1,14 +1,51 @@
-<main>
-  <div class="container">
-    <div>
-      <h1>About</h1>
-      <%	@skills.each do |skill|  %>
-        <h2><%=	 skill.title %></h2>
-        <p>Percent: <%= skill.percent_utilized %></p>
-      <%	end  %>
+<div class="container app-card-container">
+    <h1>About page</h1>
+    <div class="about-wrapper">
+      <div class="row mt-5">
+        <div class="col-md-3">
+
+          <%= image_tag "nastiia.jpeg", width: 200, height: 200, alt: "portfolio image", class: 'profile-image' %>
+
+        </div>
+        <div class="col-md-9 mt-4">
+          <p>Hi, I’m Anastasiia. I’ve been passionate about UX/UI design for the last 4
+            years. I’m a multitasker with an excellent eye for design, imaginative,
+            flexible and well-organized. In addition to creating complex systems with
+            a simple user experience, I conduct user and market research, create
+            prototypes and visual design.Hi, I’m Anastasiia. I’ve been passionate about UX/UI design for the last 4
+          <p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#jobsHistory" aria-expanded="false" aria-controls="jobHistory">
+              Job History
+
+            </button>
+            <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#education" aria-expanded="false" aria-controls="education">
+              Education
+
+            </button>
+          </p>
+          <p>
+          <div class="collapse" id="jobsHistory">
+            <div class="card card-block">
+              Jobbbsssss
+            </div>
+            <div class="card card-block">
+              Jobbbsssss
+            </div>
+          </div>
+
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              education 1
+            </div>
+            <div class="card card-block">
+              education 2
+            </div>
+          </div>
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</main>
+</div>
 
 
 

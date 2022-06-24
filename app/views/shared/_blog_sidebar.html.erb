@@ -1,0 +1,27 @@
+<aside class="col-md-4 blog-sidebar blog-margin">
+
+  <div class="p-3 mb-3 bg-light rounded">
+
+    <h4 class="font-italic">About</h4>
+    <p class="mb-0"><em>Design</em> - is both my passion and my best ally for mastery.</p>
+  </div>
+
+  <%= source_helper('alert alert-primary blog-sidebar-source') %>
+
+  <div class="p-3 social">
+    <h4 class="font-italic">Topics</h4>
+    <%#	@side_bar_topics.each do |topic| %>
+      <p><%#= link_to topic.title, topic_path(topic) %></p>
+    <%# end %>
+  </div>
+
+  <div class="p-3 social">
+    <h4 class="font-italic">Elsewhere</h4>
+    <ol class="list-unstyled">
+
+      <li><a href="https://www.linkedin.com/in/anastasiia-vlasova-a8b36216b/" target="_blank"><%= fa_icon 'linkedin 2x' %><span>LinkedIn</span></a></li>
+      <li><a href="https://www.instagram.com/nastipyvovarova/" target="_blank"><%= fa_icon 'instagram 2x' %><span>Instagram</span></a></li>
+
+    </ol>
+  </div>
+</aside>
