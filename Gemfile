@@ -39,3 +39,4 @@ gem 'blog_portfolio_view_tool', git: 'https://github.com/alexvlasov182/blog_port
 gem 'petergate', '~> 1.7'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
