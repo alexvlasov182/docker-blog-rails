@@ -26,7 +26,7 @@
       </nav>
 
       <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
-      <p><%= @blog.body %></p>
+      <p><%= markdown @blog.body %></p>
 
       <%= render 'comments/comment_form' %>
       <div id="comments" data-blog-id="<%= @blog.id %>">
