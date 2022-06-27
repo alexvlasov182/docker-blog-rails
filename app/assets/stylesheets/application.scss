@@ -200,3 +200,20 @@ h5, .h5 {
 .app-card-container a {
   color: deepskyblue;
 }
+
+.tech-news {
+  color: black;
+  margin: 20px;
+}
+
+.tech-news a {
+  color: green;
+}
+
+.tech-news > .card {
+  padding: 20px;
+  min-height: 210px;
+}
+.card-font {
+  font-family: 'Lato', sans-serif;
+}
