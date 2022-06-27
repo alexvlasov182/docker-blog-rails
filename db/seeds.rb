@@ -1,26 +1,45 @@
+User.create!(
+    email: "test@test.com",
+    password: "test@test",
+    password_confirmation: "test@test",
+    name: 'Admin User',
+    roles: 'site_admin'
+)
+
+puts "1 Admin user created"
+
+
+User.create!(
+    email: "test2@test.com",
+    password: "test@test",
+    password_confirmation: "test@test",
+    name: 'Regular User',
+    )
+
+puts "1 regular user created"
+
 3.times do |topic|
   Topic.create!(
-     title: "Topic #{topic}"
+      title: "Topic #{topic}"
   )
 end
 
+puts '3 Topics created'
+
 10.times do |blog|
   Blog.create!(
-    title: "My Blog Post About UX Design #{blog}",
-    body: "RubyGems.org is the Ruby community’s gem hosting service. Instantly publish your gems and then install them. Use the API to find out more about available gems. Become a contributor and improve the site yourself.
-RubyGems.org is made possible through a partnership with the greater Ruby community. Fastly provides bandwidth and CDN support, Ruby Central covers infrastructure costs, and Ruby Together funds ongoing development and ops work. Learn more about our sponsors and how they work together.
-We need your help to fund the developer time that keeps RubyGems.org running smoothly for everyone. Join Ruby Together today.
-",
-    topic_id: Topic.last.id
-    )
+      title: "UX Design News #{blog}",
+      body: "The field of UX design is one of the hottest areas in the tech industry today. A UX designer is responsible for creating user-friendly, intuitive designs for software and websites. The demand for UX designers is growing rapidly, and many companies are willing to pay top dollar for talented designers.",
+      topic_id: Topic.last.id
+  )
 end
 
 puts '10 blog posts created'
 
 5.times do |skill|
   Skill.create!(
-    title: "UX Design #{skill}",
-    percent_utilized: 15
+      title: "UX Design #{skill}",
+      percent_utilized: 15
   )
 end
 
@@ -28,19 +47,20 @@ puts '5 skills created'
 
 8.times do |portfolio_item|
   Portfolio.create!(
-    title: "Portfolio title #{portfolio_item}",
-    subtitle: 'UX Design',
-    body: 'Hands-on exercises, real-world scenarios, and practical team-based decision-making tools will get everyone on board and give you the experience you need to become a confident software architect. With dozens of design methods, examples, and practical know-how, Design It! shows you how to become a software architect. Walk through the core concepts every architect must know, discover how to apply them, and learn a variety of skills that will make you a better programmer, leader, and designer.',
-    main_image: 'https://place-hold.it/600x400.jpg/888/fff/',
-    thumb_image: 'https://place-hold.it/300x200.jpg/888/fff/'
+      title: "Portfolio title #{portfolio_item}",
+      subtitle: 'UX Design News',
+      body: 'So if you’re interested in pursuing a career in UX design, getting a degree could be beneficial. But ultimately, it’s up to you whether or not to pursue formal education in this field; there are many talented designers who have self-taught themselves and been successful without any formal training.',
+      main_image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngaaa.com%2Fdetail%2F997979&psig=AOvVaw2oo72vheL1YiGRZnZB7qq7&ust=1654258645041000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLjf2-vfjvgCFQAAAAAdAAAAABAD',
+      thumb_image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngaaa.com%2Fdetail%2F997979&psig=AOvVaw2oo72vheL1YiGRZnZB7qq7&ust=1654258645041000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLjf2-vfjvgCFQAAAAAdAAAAABAD'
   )
 end
+
 
 puts '8 portfolio items created'
 
 3.times do |technology|
   Portfolio.last.technologies.create!(
-    name: "Technology #{technology}"
+      name: "Technology #{technology}"
   )
 end
 
