@@ -1,7 +1,7 @@
 <%= form_for(@portfolio_item) do |f| %>
   <% if @portfolio_item.errors.any? %>
     <% @portfolio_item.errors.full_messages.each do |error| %>
-      <%= alert_generator error %>
+      <%#= alert_generator error %>
     <%	end  %>
   <% end %>
   <div class="row">
@@ -41,13 +41,13 @@
     <h2>Technologies Used:</h2>
 
     <div>
-      <%#= f.fields_for :technologies do |technology_form| %>
-        <%#=	 render 'technology_fields', f: technology_form %>
-      <%# end %>
+      <%= f.fields_for :technologies do |technology_form| %>
+        <%=	 render 'technology_fields', f: technology_form %>
+      <% end %>
     </div>
 
     <div>
-      <%#=	 link_to_add_association 'Add Technology', f, :technologies %>
+      <%=	 link_to_add_association 'Add Technology', f, :technologies %>
     </div>
   </div>
 
