@@ -1,11 +1,16 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit]}, site_admin: :all
+  before_action :set_sidebar_topics, except: %i[update destroy toggle_status]
   layout 'blog'
+  access all: %i[show index], user: { except: %i[destroy new create update edit toggle_status] }, site_admin: :all
 
   def index
-    @blogs = Blog.page(params[:page]).per(5)
-    @page_title = 'My Portfolio | Blog'
+    @blogs = if logged_in?(:site_admin)
+               Blog.recent.page(params[:page]).per(5)
+             else
+               Blog.published.recent.page(params[:page]).per(5)
+             end
+    @page_title = 'My Portfolio Blog'
   end
 
   def show
@@ -67,7 +72,8 @@ class BlogsController < ApplicationController
     elsif @blog.published?
       @blog.draft!
     end
-    redirect_to blogs_url, notice: "Post status has been updated."
+
+    redirect_to blogs_url, notice: 'Post status has been updated.'
   end
 
   private
@@ -76,6 +82,10 @@ class BlogsController < ApplicationController
   end
 
   def blog_params
-    params.require(:blog).permit(:title, :body)
+    params.require(:blog).permit(:title, :body, :topic_id, :status)
+  end
+
+  def set_sidebar_topics
+    @side_bar_topics = Topic.with_blogs
   end
 end

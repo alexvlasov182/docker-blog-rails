@@ -226,6 +226,7 @@ GEM
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redcarpet (3.5.1)
     redis (3.3.5)
     responders (3.0.1)
       actionpack (>= 5.0)
@@ -299,6 +300,7 @@ DEPENDENCIES
   byebug
   carrierwave-aws (~> 1.0, >= 1.0.2)
   cocoon (~> 1.2, >= 1.2.15)
+  coderay (~> 1.1, >= 1.1.1)
   coffee-rails (~> 4.2)
   devise (~> 4.2)
   dotenv-rails (~> 2.7, >= 2.7.6)
@@ -317,6 +319,7 @@ DEPENDENCIES
   pry-byebug
   puma (~> 3.7)
   rails (~> 5.0.1)
+  redcarpet (~> 3.4)
   redis (~> 3.3, >= 3.3.3)
   sass-rails (~> 5.0)
   spring
